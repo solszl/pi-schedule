@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import styles from './App.module.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Welcome from './components/Welcome/Welcome';
+import logo from './logo.svg';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -42,14 +42,10 @@ function App() {
               Vite Docs
             </a>
           </p>
-          <Switch>
-            <Route path="/about">
-              <main>About</main>
-            </Route>
-            <Route path="/">
-              <main>Home</main>
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/about" element={<main>About</main>}></Route>
+            <Route path="/" element={<main>Home</main>}></Route>
+          </Routes>
         </header>
       </div>
     </Router>
