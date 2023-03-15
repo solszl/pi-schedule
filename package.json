@@ -1,6 +1,6 @@
 {
-  "name": "vite-react-express-docker-boilerplate",
-  "version": "0.0.0",
+  "name": "pi-schedule",
+  "version": "0.0.1",
   "scripts": {
     "clean": "rimraf dist",
     "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
@@ -12,7 +12,8 @@
     "serve": "vite preview",
     "prepare": "husky install",
     "test": "prettier --check . && eslint . && stylelint \"**/*.css\"",
-    "start": "node dist/server/index.js"
+    "start": "node dist/server/index.js",
+    "build:docker": "npm run build && node ./build.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
@@ -45,6 +46,7 @@
     "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.9.0"
+    "react-router-dom": "^6.9.0",
+    "shelljs": "^0.8.5"
   }
 }
