@@ -11,7 +11,7 @@
     "build": "npm run server:build && npm run client:build",
     "serve": "vite preview",
     "prepare": "husky install",
-    "test": "prettier --check . && eslint . && stylelint \"**/*.css\"",
+    "test": "prettier --check . && eslint . && stylelint --fix \"**/*.css\"",
     "start": "node dist/server/index.js",
     "build:docker": "npm run build && node ./build.js"
   },

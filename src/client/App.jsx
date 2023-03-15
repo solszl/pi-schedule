@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import styles from './App.module.css';
-import Welcome from './components/Welcome/Welcome';
-import logo from './logo.svg';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import styles from "./App.module.css";
+import Welcome from "./components/Welcome/Welcome";
+import logo from "./logo.svg";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,8 +10,8 @@ function App() {
   return (
     <Router>
       <div className={styles.App}>
-        <header className={styles['App-header']}>
-          <img src={logo} className={styles['App-logo']} alt="logo" />
+        <header className={styles["App-header"]}>
+          <img src={logo} className={styles["App-logo"]} alt="logo" />
           <Welcome />
           <p>
             <button onClick={() => setCount((count) => count + 1)}>
@@ -25,16 +25,16 @@ function App() {
           <p>SVG path: {`${import.meta.env.VITE_SVG_PATH}`}</p>
           <p>
             <a
-              className={styles['App-link']}
+              className={styles["App-link"]}
               href="https://reactjs.org"
               target="_blank"
               rel="noopener noreferrer"
             >
               Learn React
             </a>
-            {' | '}
+            {" | "}
             <a
-              className={styles['App-link']}
+              className={styles["App-link"]}
               href="https://vitejs.dev/guide/features.html"
               target="_blank"
               rel="noopener noreferrer"
